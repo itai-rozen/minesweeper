@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Itai Rozen's MineSweeper!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylish.css" />
+    <link href="https://fonts.googleapis.com/css?family=Warnes" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"  crossorigin="anonymous">
+</head>
+
+<body onload=init()>
+        <h1>Mine Sweeper</h1>
+
+        <div class="game-header-container flex">
+            <div class="mines-container">
+                <div class="mine-icon">💣</div>
+                <div class="mine-num"></div>
+            </div>
+            <div class="hints"></div>
+            <div class="time-box">
+                <div class="time"></div>   
+            </div>
+            <div class="smiley">
+                <div class="status"></div>
+            </div>
+
+        </div>
+    <section >
+    <div class="choices">
+        
+        <input type="radio" name="difficulty" id="easy" onclick="chooseDifficulty(value)" value="0" />
+        <label for="easy">Easy</label>
+        <input type="radio" name="difficulty" id="medium" onclick="chooseDifficulty(value)" value="1" />
+        <label for="medium">Medium</label>
+        <input type="radio" name="difficulty" id="Hard" onclick="chooseDifficulty(value)" value="2" />
+        <label for="Hard">Hard</label>
+        
+    </div>
+    </section>
+    <table class="center">
+        <tbody class="board" oncontextmenu="return false"></tbody>
+    </table>
+    <script src="js/util.js"></script>
+    <script src="js/minesweeper_new.js"></script>
+</body>
+
+</html>

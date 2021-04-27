@@ -1,0 +1,208 @@
+@font-face{
+
+    font-family: Warnes ;
+    src:url('Digits.ttf'), format('truetype')
+}
+
+body {
+
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    display: flex;
+    /* max-width : 100%; */
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+    h1 {
+        font-family: Warnes, cursive;
+        font-size: 100px;
+        letter-spacing: 5px;
+        color: tomato;
+        text-shadow: 2px 2px black;
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+table {
+  margin: 0 auto;
+  cursor: pointer;
+}
+tbody {
+  margin: auto auto;
+}
+.choices {
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 2px 2px black;
+  letter-spacing: 2px;
+}
+
+input,label {
+  cursor: pointer;
+}
+
+.cell {
+    display: inline-block;
+    position: static;
+    width : 34px;
+    max-width : 34px;
+    cursor: pointer;
+    margin: 6px;
+    height : 31px;
+    border: 7px solid rgb(0,10,10);
+    background-color: rgb(200, 152, 200);
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.3s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;
+    line-height: 31px;
+
+}
+
+.cell:not(.unchecked){
+  border: 7px solid rgb(70, 70, 70)
+}
+.cell img {
+    size: 31px 31px;
+    line-height: 31px;
+}
+
+.hints {
+  border: 2px solid black;
+  width: 240px;
+  margin: 0;
+  transition: .3s;
+  background-color: rgba(255 ,255,255 , 0.3);
+}
+
+.hints img {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    line-height:56px ;
+    margin: 5px 10px;
+    display: inline-block;
+}
+.unchecked {
+    background-color: rgb(53, 44, 180);
+    width: 34px;
+    height: 31px;
+}
+.unchecked:hover:not(.flagged){
+    animation:  ease-in-out hvr-bob .5s ;
+
+}
+     .flagged {
+    background-image: "img/flag.png";
+}
+
+ .time-box { 
+    width: 56px;
+    /* height: 56px; */
+    text-align: center;
+    background-color: black;
+    color : white;
+    line-height: 50px;
+}
+.smiley img{
+    width: 56px;
+    /* height: 56px; */
+    background-color: black;
+    object-fit: cover;
+    color : white;   
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.game-header-container > * {
+  height: 56px;
+  margin: 0 5px;
+}
+
+/* Bob */
+@-webkit-keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    25%{
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    50% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    75%{
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }
+  @keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    25%{
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    50% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    75%{
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }
+
+  .mine {
+    background-color: tomato;
+    font-size: 1.2em;
+  }
+
+  .mines-container {
+    background-color: white;
+    border: 1px solid black;
+    width: 40px;
+    position: relative;
+  }
+
+  .mine-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .mine-num {
+    line-height: 56px;
+  }
+
+  .hint-mode  .unchecked:hover {
+    background-color: rgba(241, 238, 8, 0.7);
+  }
+
+  .hint-mode  .hints  {
+    transition: .3s;
+    background-color: rgba(241, 238, 8, 0.7);
+  }
+
+  
